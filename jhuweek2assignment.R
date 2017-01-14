@@ -12,7 +12,7 @@ pollutantmean <- function(dir, pollutant, id=1:332){
         print(i)
         temp <- 0
       }
-    m <- m+ temp
+    m <- m+ temp                                          #cumulative sum of pollutant values across 320 files
     l <- l + length(which(!is.na(dataset[pollutant])))     #calculating the length of complete observations for 2 columns. 
   }
   total <- m/l
